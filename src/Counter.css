@@ -1,0 +1,27 @@
+.align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.description {
+  font-size:3vw;
+}
+
+.time {
+  font-size:15vw;
+}
+
+.content {
+  display: inline;
+  position: absolute;
+}
+
+.left {
+  padding-right: 50vw;
+}
+
+.right {
+  padding-left: 50vw;
+}
