@@ -22,32 +22,48 @@ class Counter extends React.Component {
     )
   }
 
+  counter = () => {
+    return (
+      <div
+        className='align'
+        style={{paddingTop: '2vw'}} 
+      >
+        <div className='content time left'>
+          {this.countResult['hours']}
+        </div>
+        <div className='content time'>
+          {this.countResult['minutes']}
+        </div>
+        <div className='content time right'>
+          {this.countResult['seconds']}
+        </div>
+      </div>
+    )
+  }
+
   render = () => {
     this.countResult = count();
     const header = this.counterHeader()
+    const counter = this.counter()
 
     return (
-      <div>
+      <div style={{display: "table"}}>
         {header}
-        <div
-          className='align'
-          style={{paddingTop: '2vw'}} 
-        >
-          <div className='content time left'>
-            {this.countResult['hours']}
-          </div>
-          <div className='content time'>
-            {this.countResult['minutes']}
-          </div>
-          <div className='content time right'>
-            {this.countResult['seconds']}
-          </div>
-        </div>
+        {counter}
       </div>
     );
   }
 }
 
+class MiddleScreenCounter extends React.Component {
+  render = () => {
+    return (
+      <div className='middle-screen'>
+        <Counter />
+      </div>
+    )
+  }
+}
 
 
-export default Counter;
+export {Counter, MiddleScreenCounter}

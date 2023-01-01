@@ -1,8 +1,13 @@
 .align {
-  display: flex;
+  display: table-row;
   flex-direction: column;
   align-items: center;
+  /* display: ruby; */
   color: white;
+}
+
+.line {
+  display: table-row;
 }
 
 .description {
@@ -13,15 +18,19 @@
   font-size:15vw;
 }
 
+.middle-screen {
+  min-height: 50%;
+}
+
 .content {
-  display: inline;
-  position: absolute;
+  display: table-cell;
+  /* position: absolute; */
 }
 
 .left {
-  padding-right: 50vw;
+  padding-right: 5vw;
 }
 
 .right {
-  padding-left: 50vw;
+  padding-left: 5vw;
 }
