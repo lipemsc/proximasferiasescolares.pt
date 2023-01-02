@@ -8,7 +8,7 @@ class Counter extends React.Component {
   
   counterHeader = () => {
     return (
-      <div className='align'>
+      <div className='line'>
         <div className='content description left'>
           horas
         </div>
@@ -25,7 +25,7 @@ class Counter extends React.Component {
   counter = () => {
     return (
       <div
-        className='align'
+        className='line'
         style={{paddingTop: '2vw'}} 
       >
         <div className='content time left'>
@@ -47,7 +47,7 @@ class Counter extends React.Component {
     const counter = this.counter()
 
     return (
-      <div style={{display: "table"}}>
+      <div className='container'>
         {header}
         {counter}
       </div>
