@@ -4,7 +4,6 @@ import count from './counters/1';
 
 
 class Counter extends React.Component {
-  countResult = count();
   
   counterHeader = () => {
     return (
@@ -42,7 +41,7 @@ class Counter extends React.Component {
   }
 
   render = () => {
-    this.countResult = count();
+    this.countResult = count("Jan 3, 2023 01:30:00");
     const header = this.counterHeader()
     const counter = this.counter()
 
