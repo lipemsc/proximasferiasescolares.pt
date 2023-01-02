@@ -20,8 +20,7 @@
 }
 
 .middle-screen {
-  min-height: 100vh;
-  overflow: auto;
+  margin-top: calc(45vh - 10vw)
 }
 
 .content {
