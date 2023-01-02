@@ -23,6 +23,20 @@
   margin-top: calc(45vh - 10vw)
 }
 
+@media only screen and (max-width: 768px) {
+  .description {
+    font-size:7vw;
+  }
+
+  .time {
+    font-size:25vw;
+  }
+
+  .middle-screen {
+    margin-top: calc(45vh - 18vw)
+  }
+}
+
 .content {
   display: table-cell;
   /* position: absolute; */
