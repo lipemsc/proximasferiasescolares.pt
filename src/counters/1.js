@@ -9,13 +9,13 @@ const count = (dateString) => {
     out['minutes'] = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
     out['seconds'] = Math.floor((distance % (1000 * 60)) / 1000)
     
-    if(out['hours'] < 10 && out['hours'] > 0)
+    if(out['hours'] < 10 && out['hours'] >= 0)
       out['hours']="0" + out['hours'];
     
-    if(out['minutes'] < 10 && out['minutes'] > 0)
+    if(out['minutes'] < 10 && out['minutes'] >= 0)
       out['minutes']="0" + out['minutes'];
     
-    if(out['seconds'] < 10 && out['seconds'] > 0)
+    if(out['seconds'] < 10 && out['seconds'] >= 0)
       out['seconds']="0" + out['seconds'];
 
     return out
