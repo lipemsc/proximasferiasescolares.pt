@@ -25,11 +25,11 @@
 
 @media only screen and (max-width: 768px) {
   .description {
-    font-size:7vw;
+    font-size:6vw;
   }
 
   .time {
-    font-size:25vw;
+    font-size:22vw;
   }
 
   .middle-screen {
@@ -39,13 +39,6 @@
 
 .content {
   display: table-cell;
+  padding-right: 1vw;
   /* position: absolute; */
-}
-
-.left {
-  padding-right: 5vw;
-}
-
-.right {
-  padding-left: 5vw;
 }

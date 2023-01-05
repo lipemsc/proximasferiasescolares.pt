@@ -11,8 +11,12 @@ class Counter extends React.Component {
         <div className='content description left'>
           horas
         </div>
+        <div className='content'>
+        </div>
         <div className='content description'>
           minutos
+        </div>
+        <div className='content'>
         </div>
         <div className='content description right'>
           segundos
@@ -30,8 +34,12 @@ class Counter extends React.Component {
         <div className='content time left'>
           {this.countResult['hours']}
         </div>
+        <div className='content time'>:
+        </div>
         <div className='content time'>
           {this.countResult['minutes']}
+        </div>
+        <div className='content time'>:
         </div>
         <div className='content time right'>
           {this.countResult['seconds']}
