@@ -9,7 +9,9 @@ class App extends React.Component {
   render = () => {
     return (
       <div className='background'>
-        <MiddleScreenCounter />
+        <div className='backgroundFilter'>
+          <MiddleScreenCounter />
+        </div>
       </div>
     );
   }
