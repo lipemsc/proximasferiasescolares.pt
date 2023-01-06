@@ -1,5 +1,4 @@
 const count = (dateString) => {
-  // console.log(dateString)
   var countDownDate1 = new Date(dateString).getTime();
   var out = []
     var now = new Date().getTime()
@@ -20,11 +19,5 @@ const count = (dateString) => {
 
     return out
 }
-
-/* const countEachSecond = () => {
-  var x = setInterval(function() {
-    count()
-  }, 1000);
-} */
 
 export default count
