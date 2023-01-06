@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Counter, MiddleScreenCounter } from './Counter';
+import Title from './Title';
 
 class App extends React.Component {
   
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
       <div className='background'>
         <div className='backgroundFilter'>
+          <Title />
           <MiddleScreenCounter />
         </div>
       </div>

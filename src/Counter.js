@@ -54,7 +54,7 @@ class Counter extends React.Component {
     const counter = this.counter()
 
     return (
-      <div className='container'>
+      <div className='counterContainer'>
         {header}
         {counter}
       </div>
