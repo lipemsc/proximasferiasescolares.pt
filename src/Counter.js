@@ -49,7 +49,7 @@ class Counter extends React.Component {
   }
 
   render = () => {
-    this.countResult = count("2023-01-08T01:30:00.000");
+    this.countResult = count("2023-03-31T18:10:00.000");
     const header = this.counterHeader()
     const counter = this.counter()
 
