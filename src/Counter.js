@@ -49,6 +49,9 @@ class Counter extends React.Component {
   }
 
   render = () => {
+    // Loading icon or animation would be interesting
+    if (this.props.dateString === "") return false
+
     this.countResult = count(this.props.dateString)
     const header = this.counterHeader()
     const counter = this.counter()

@@ -11,10 +11,6 @@ const fetchApi = () => {
   axios.get("https://api.proximasferiasescolares.pt/").then((response) => {
     date = response.data
   })
-  /* 
-  fetch("https://api.proximasferiasescolares.pt/").then((response) => {
-    console.log(response.body);
-  }) */
 }
 
 const renderPage = () => {
