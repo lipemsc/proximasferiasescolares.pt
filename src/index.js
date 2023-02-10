@@ -26,9 +26,8 @@ const renderPage = () => {
   );
 }
 
+fetchApi()
 renderPage()
-
-
 
 setInterval(() => {
   renderPage()
@@ -36,4 +35,4 @@ setInterval(() => {
 
 setInterval(() => {
   fetchApi()
-}, 1000);
+}, 25000);
