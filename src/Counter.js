@@ -66,7 +66,7 @@ class MiddleScreenCounter extends React.Component {
   render = () => {
     return (
       <div className='middle-screen'>
-        <Counter dateString = "2023-03-31T18:10:00.000" />
+        <Counter dateString = {this.props.dateString} />
       </div>
     )
   }
