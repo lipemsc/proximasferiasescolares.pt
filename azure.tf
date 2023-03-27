@@ -11,6 +11,20 @@ provider "azurerm" {
   features {}
 }
 
+variable "types" {
+  type = map(string)
+  # description = "(optional) describe your variable"
+  default = {
+    ".html" = "text/html"
+    ".css" = "text/css"
+    ".webp" = "image/webp"
+    ".png" = "image/png"
+    ".json" = "text/json"
+    ".map" = "text/map"
+    ".js" = "text/javascript"
+  }
+}
+
 resource "azurerm_resource_group" "ferias" {
   name     = var.resource_group_name
   location = "West Europe"
@@ -36,5 +50,11 @@ resource "azurerm_storage_blob" "blobs" {
   storage_account_name   = azurerm_storage_account.webstorageaccount.name
   storage_container_name = "$web"
   type                   = "Block"
-  source                 = "${path.root}/build/${each.key}"  
+  source                 = "${path.root}/build/${each.key}"
+  content_type           = lookup(var.types, regex("\\.[^.]+$", each.value), null)
+}
+
+output "websiteurl" {
+  value = azurerm_storage_account.webstorageaccount.primary_web_endpoint
+  description = "Link to the deployed website"
 }
