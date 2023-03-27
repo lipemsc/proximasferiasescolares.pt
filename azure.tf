@@ -27,12 +27,6 @@ resource "azurerm_storage_account" "webstorageaccount" {
   }
 }
 
-resource "azurerm_storage_container" "webstoragecontainer" {
-  name                  = "test"
-  storage_account_name  = azurerm_storage_account.webstorageaccount.name
-  container_access_type = "container"
-}
-
 resource "azurerm_storage_blob" "blobs" {
   for_each = fileset("${path.root}/${var.build_folder}", "**")
   name = each.key
