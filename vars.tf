@@ -7,3 +7,8 @@ variable "build_folder" {
     description = "Folder where the build files are created"
     type = string
 }
+
+variable "storage_account_name" {
+    description = "Storage account name to be created. It must be unique"
+    type = string
+}
