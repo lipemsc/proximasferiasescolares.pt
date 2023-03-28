@@ -10,7 +10,7 @@ class App extends React.Component {
       <div className='background'>
         <div className='backgroundFilter'>
           <Title />
-          <MiddleScreenCounter dateString = {this.props.dateString}/>
+          <MiddleScreenCounter />
         </div>
       </div>
     );

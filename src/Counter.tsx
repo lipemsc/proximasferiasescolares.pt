@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 import './Counter.css';
-import count from './count';
+import { count } from './count';
 import axios from 'axios';
 
 const fetchApi = async () => {
@@ -82,7 +82,7 @@ const _Counter = ({dateString}): ReactElement => {
 }
 
 
-export const MiddleScreenCounter = ({dateString}) => {
+export const MiddleScreenCounter = () => {
   return (
     <div className='middle-screen'>
       <Counter/>

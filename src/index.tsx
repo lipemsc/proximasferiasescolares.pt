@@ -4,12 +4,11 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-var date = ""
 
 const renderPage = () => {
   root.render(
     <div>
-      <App dateString = {date}/>
+      <App/>
     </div>
     
   );
