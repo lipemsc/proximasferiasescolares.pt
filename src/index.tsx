@@ -16,12 +16,3 @@ const renderPage = () => {
 }
 
 renderPage()
-
-/* setInterval(() => {
-  renderPage()
-}, 10); */
-
-/* setInterval(() => {
-  fetchApi()
-}, 25000);
- */

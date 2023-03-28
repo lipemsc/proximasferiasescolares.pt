@@ -25,6 +25,7 @@ export const Counter = (): ReactElement => {
   if (dateString === "") return <div/>
 
   return (
+    // eslint-disable-next-line
     <_Counter dateString={dateString}/>
   )
 }
