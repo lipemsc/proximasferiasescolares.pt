@@ -1,4 +1,5 @@
 # ![aa](public/favicon.ico) [Próximas Férias Escolares](https://proximasferiasescolares.pt)
+[![Deploy to Amazon S3](https://github.com/lipemsc/proximasferiasescolares.pt/actions/workflows/aws.yml/badge.svg)](https://github.com/lipemsc/proximasferiasescolares.pt/actions/workflows/aws.yml)
 
 Site de contagem regressiva para as férias escolares.
 
