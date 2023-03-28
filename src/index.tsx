@@ -2,16 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import axios from 'axios';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 var date = ""
-
-const fetchApi = () => {
-  axios.get("https://api.proximasferiasescolares.pt/").then((response) => {
-    date = response.data
-  })
-}
 
 const renderPage = () => {
   root.render(
@@ -22,13 +15,13 @@ const renderPage = () => {
   );
 }
 
-fetchApi()
 renderPage()
 
-setInterval(() => {
+/* setInterval(() => {
   renderPage()
-}, 10);
+}, 10); */
 
-setInterval(() => {
+/* setInterval(() => {
   fetchApi()
 }, 25000);
+ */
