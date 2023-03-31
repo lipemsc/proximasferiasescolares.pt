@@ -4,6 +4,10 @@ export const count = (dateString: string): Map<string, any> => {
   let now: number = new Date().getTime()
   let distance: number = countDownDate - now
 
+  out.set('ferias', distance < 0)
+
+  // console.log(distance < 0)
+
   out.set('days', Math.floor(distance / (1000 * 60 * 60 * 24)))
   out.set('hours', Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
   out.set('minutes', Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
@@ -20,3 +24,4 @@ export const count = (dateString: string): Map<string, any> => {
 
   return out
 }
+

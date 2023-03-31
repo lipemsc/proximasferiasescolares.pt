@@ -41,20 +41,42 @@ const _Counter = ({dateString}): ReactElement => {
 
   // Loading icon or animation would be interesting
 
+  if (countResult.get('ferias')) {
+    return (
+      <FeriasCounter />
+    )
+  }
+
+  if (countResult.get('days') === 0) {
+    return (
+      <HoursCounter
+        countResult={countResult}
+      />
+    )
+  }
+
+  return (
+    <DaysCounter
+      countResult={countResult}
+    />
+  );
+}
+
+const HoursCounter = (props: {countResult: Map<string, any>}) => {
   return (
     <div className='counterContainer'>
       <div className='line'>
-        <div className='content description left'>
+        <div className='timeContent timeDescription'>
           horas
         </div>
-        <div className='content'>
+        <div className='timeContent'>
         </div>
-        <div className='content description'>
+        <div className='timeContent timeDescription'>
           minutos
         </div>
-        <div className='content'>
+        <div className='timeContent'>
         </div>
-        <div className='content description right'>
+        <div className='timeContent timeDescription'>
           segundos
         </div>
       </div>
@@ -63,24 +85,47 @@ const _Counter = ({dateString}): ReactElement => {
         className='line'
         style={{paddingTop: '2vw'}} 
       >
-        <div className='content time left'>
-          {countResult.get('hours')}
+        <div className='timeContent time'>
+          {props.countResult.get('hours')}
         </div>
-        <div className='content time'>:
+        <div className='timeContent time'>:
         </div>
-        <div className='content time'>
-          {countResult.get('minutes')}
+        <div className='timeContent time'>
+          {props.countResult.get('minutes')}
         </div>
-        <div className='content time'>:
+        <div className='timeContent time'>:
         </div>
-        <div className='content time right'>
-          {countResult.get('seconds')}
+        <div className='timeContent time'>
+          {props.countResult.get('seconds')}
         </div>
       </div>
     </div>
-  );
+  )
 }
 
+const DaysCounter = (props: {countResult: Map<string, any>}) => {
+  return (
+    <div className='counterContainer'>
+      <div className='line'>
+        <div className='days'>
+          {props.countResult.get("days")} dias
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const FeriasCounter = () => {
+  return (
+    <div className='counterContainer'>
+      <div className='line'>
+        <div className='ferias'>
+          FÉRIAS
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export const MiddleScreenCounter = () => {
   return (
@@ -89,4 +134,5 @@ export const MiddleScreenCounter = () => {
     </div>
   )
 }
+
 
