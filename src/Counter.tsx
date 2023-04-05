@@ -16,7 +16,7 @@ export const Counter = (): ReactElement => {
       setDate(_)
     })
 
-  setInterval(() => {
+  setTimeout(() => {
     fetchApi().then((_) => {
       setDate(_)
     })
@@ -35,7 +35,7 @@ const _Counter = ({dateString}): ReactElement => {
   // let countResult = count(dateString)
   const [countResult, setCountResult] = useState(count(dateString))
 
-  setInterval(() => {
+  setTimeout(() => {
     setCountResult(count(dateString))
   }, 50)
 
