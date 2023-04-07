@@ -64,17 +64,17 @@ const _Counter = ({dateString}): ReactElement => {
         style={{paddingTop: '2vw'}} 
       >
         <div className='content time left'>
-          {countResult['hours']}
+          {countResult.get('hours')}
         </div>
         <div className='content time'>:
         </div>
         <div className='content time'>
-          {countResult['minutes']}
+          {countResult.get('minutes')}
         </div>
         <div className='content time'>:
         </div>
         <div className='content time right'>
-          {countResult['seconds']}
+          {countResult.get('seconds')}
         </div>
       </div>
     </div>
